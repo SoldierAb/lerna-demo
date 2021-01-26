@@ -1,6 +1,6 @@
 {
   "name": "kst-cli",
-  "version": "1.4.3",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SoldierAb/kst-cli.git"
