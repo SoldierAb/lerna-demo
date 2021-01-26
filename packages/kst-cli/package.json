@@ -1,0 +1,71 @@
+{
+  "name": "kst-cli",
+  "version": "1.4.3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoldierAb/kst-cli.git"
+  },
+  "scripts": {
+    "commit": "git add . && git-cz",
+    "lint": "eslint lib scripts bin",
+    "release": "standard-version",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "chengj"
+  },
+  "bin": {
+    "kst": "bin/kst.js",
+    "kst-create": "bin/kst-create.js"
+  },
+  "bugs": {
+    "url": "https://github.com/SoldierAb/kst-cli/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^7.0.0",
+    "ora": "^4.0.2"
+  },
+  "deprecated": false,
+  "description": "Standard Tooling for Vue.js Development",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.8.0",
+    "events": "^3.0.0",
+    "fs": "0.0.1-security",
+    "git-cz": "^3.3.0",
+    "lint-staged": "^9.5.0",
+    "pre-commit": "^1.2.2",
+    "readline": "^1.3.0",
+    "standard-version": "^7.0.1",
+    "strip-ansi": "^6.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit.js"
+  },
+  "homepage": "https://github.com/SoldierAb/kst-cli#readme",
+  "keywords": [
+    "cli",
+    "vue"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "main": "index.js"
+}
